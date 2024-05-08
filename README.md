@@ -1,5 +1,5 @@
  <h1 align=center>hbs / hand7sbootstrap</h1>
-<p align=center>=> simple bootstrapping script <=</p>
+<p align=center>=> simple bootstrapping script <=</p> 
 <img source=(https://github.com/s0me1newithhand7s/hand7sbootstrap/assets/117505144/ec2ff944-4b6d-4ff9-9ad7-9ba8823cb681)>
 <p align=center>Simple script created for linux tarball bootstrapping. </p>
 <br>
@@ -22,3 +22,5 @@
 Rsas aka [Russanandres](https://github.com/Russanandres/) for testings and some help with.
   
 Max aka [MaxMur](https://github.com/themaxmur/) testings.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
