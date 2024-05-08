@@ -19,7 +19,7 @@
 <h2 align=center>▶ Special thanks to:</h2>
 <br>
   
-Rsas aka [Russanandres](https://github.com/Russanandres/) for testings and some help with.
+Rsas aka [Russanandres](https://github.com/Russanandres/) for testings, forking and script help.
   
 Max aka [MaxMur](https://github.com/themaxmur/) testings.
 
