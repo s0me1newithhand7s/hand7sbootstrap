@@ -4,6 +4,7 @@
 <h2 align=center>:warning: Before use :warning:</h2>
 <p> :one: This script is ment to be executed from <code>root</code> (sudo/doas) and if you DO NOT understand what exactly you doing - DO NOT execute it.</p>
 <p> :two: I am do not responsable for actions perfomed by you.</p>
+<p> :three: Before executing make sure that you have <code>/dev/disk/by-label/root</code> and <code>/dev/disk/by-label/boot</code> as script is mounting them into <code>/mnt/hbs</code> directory!</p>
 <br>
 <h2 align=center>:question: How to? :question:</h2>
 <p align=center>Two ways:</p>
