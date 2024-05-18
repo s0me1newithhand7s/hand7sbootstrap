@@ -9,6 +9,9 @@ checks() {
 
 dirmake() {
     mkdir -p /mnt/hbs
+    mount /dev/disk/by-label/root /mnt/hbs
+    mkdir -p /mnt/hbs/boot
+    mount /dev/disk/by/label/boot /mnt/hbs/boot
     cd /mnt/hbs
 }
 
@@ -97,9 +100,8 @@ hbs_deb_str() {
     fi
     curl https://raw.githubusercontent.com/aburch/debootstrap/master/scripts/sid > /usr/share/debootstrap/scripts/sid
     curl https://raw.githubusercontent.com/aburch/debootstrap/master/functions > /usr/share/debootstrap/functions
-    bash <(curl -fsLS https://raw.githubusercontent.com/aburch/debootstrap/master/debootstrap) --arch=amd64 --make-tarball=debian.tar.gz --no-check-certificate --no-check-gpg sid /mnt/hsb http://deb.debian.org/debian/
+    bash <(curl -fsLS https://raw.githubusercontent.com/aburch/debootstrap/master/debootstrap) --arch=amd64 --no-check-certificate --no-check-gpg sid /mnt/hsb http://deb.debian.org/debian/
     rm -rf /usr/share/debootstrap
-    untar
 }
 
 hbs_type() {
