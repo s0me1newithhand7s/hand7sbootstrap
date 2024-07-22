@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 checks() {
-    if ! [ $(id -u) = 0 ]; then
+    if ! [[ $(id -u) == 0 ]]; then
         echo -e "\033[1;34mRun me as a root.\033[0;37m"
         exit 1
     fi
@@ -20,16 +20,16 @@ dist_type() {
 }
 
 dist_family() {
-    if [[ "$DIST" = arch ]]; then
+    if [[ "$DIST" == arch ]]; then
         echo -e "\033[1;Choosen Arch.\033[0;37m"
-    elif [[ "$DIST" = debian ]]; then
+    elif [[ "$DIST" == debian ]]; then
         read -p "Which type? (debian/ubuntu):" DEB
         echo -e "\033[1;34mChoosen $DEB.\033[0;37m"
-    elif [[ "$DIST" = gentoo ]]; then
+    elif [[ "$DIST" == gentoo ]]; then
         echo -e "\033[1;34mChoosen gentoo.\033[0;37m"
-    elif [[ "$DIST" = slackware ]]; then
+    elif [[ "$DIST" == slackware ]]; then
         echo -e "\033[1;34mChoosen slackware.\033[0;37m"
-    elif [[ "$DIST" = void ]]; then
+    elif [[ "$DIST" == void ]]; then
         echo -e "\033[1;34mChoosen Void.\033[0;37m"
     else 
         input_error
@@ -43,11 +43,11 @@ hbs_pacman() {
 }
 
 hbs_deb() {
-    if [[ "$DEB" == ubuntu ]]; then
+    if [[ "$DEB" = ubuntu ]]; then
         echo -e "\033[1;34mNow acquire ubuntu minimal tarball.\033[0;37m" 
         wget https://cloud-images.ubuntu.com/releases/24.04/release/ubuntu-24.04-server-cloudimg-arm64-root.tar.xz
         untar
-    elif [[ "$DEB" == debian ]]; then
+    elif [[ "$DEB" = debian ]]; then
         echo -e "\033[1;34mGood luck. Now you on your own. =)\033[0;37m" 
         hbs_deb_str
     else
@@ -105,15 +105,15 @@ hbs_deb_str() {
 }
 
 hbs_type() {
-    if [[ "$DIST" = arch ]]; then
+    if [[ "$DIST" == arch ]]; then
         hbs_pacman
-    elif [[ "$DIST" = debian ]]; then
+    elif [[ "$DIST" == debian ]]; then
         hbs_deb
-    elif [[ "$DIST" = gentoo ]]; then
+    elif [[ "$DIST" == gentoo ]]; then
         hbs_gentoo
-    elif [[ "$DIST" = slackware ]]; then
+    elif [[ "$DIST" == slackware ]]; then
         hbs_slackware
-    elif [[ "$DIST" = void ]]; then
+    elif [[ "$DIST" == void ]]; then
         hbs_void
     fi
 }
